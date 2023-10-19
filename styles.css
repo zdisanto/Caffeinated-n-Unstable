@@ -8,6 +8,46 @@
         --gray: #565656;
         --font-color: #1a1a1a; */
 }
+/* == Nav Bar == */
+.nav {
+    font-family: var(--Oswald);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: var(--main-red); */
+    /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4); */
+    /* z-index: 10; */
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a {
+    display: block;
+    font-size: 16px;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    background: var(--main-blue);
+}
 
 body {
     /* background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); */
