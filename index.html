@@ -2,8 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="author" content="Zo DiSanto">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CAFFINATED 'n' UNSTABLE</title>
+        <!-- Favicon grabbed from zdisanto (my) GitHub Profile Photo -->
+        <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70993217?s=400&amp;u=c252d82e2c57cd011fcbf8a6a89729fcbc9d9026&amp;v=4">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +16,12 @@
     </head>
     <body>
         <nav id="navbar" class="nav">
-            <ul class="nav-list">
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list left">
                 <li>
                     <a href="#about">About</a>
                 </li>
@@ -24,79 +32,93 @@
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
+            <ul class="nav-list right">
+                <li>
+                    <a href="#home">CAFFINATED 'n' UNSTABLE</a>
+                </li>
+            </ul>
         </nav>
-        <div class="menu">
-        <header>
-            <h1>CAFFINATED 'n' UNSTABLE</h1>
-            <p class="established">Est. 2023</p>
-        </header>
-        <hr>
-        <main>
-            <section>
-            <h2>Coffee</h2>
-            <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
-            <!-- Costs from: https://www.extension.iastate.edu/sioux/files/documents/Cost%20of%20Ingredients%202016.pdf -->
-            <article class="item">
-                <p class="flavor">Brown Sugar Cinnamon Iced Coffee</p><p class="price">1.50</p>
-                <!-- OG = Starbucks Iced Brown Sugar Oatmilk Shaken Espresso - $7.25, saving $5.75
-                    Brown Sugar (1tbs; $0.02)
-                    Cinnamon(sprikle; $0.02)
-                    Almond Milk(1/4 of your cup [1/4 gal = 3.75 so 1/4th cup =~$1.00])
-                    Coffee(3/4 of your cup; $0.20) 
-                    (two drops of Vanilla extract if youre feeling spicy; $0.10)
-                    as much ice as your heart desires: we recommend 4 cubes; free 
-                    ~ $1.34; Round up, $1.50
-                -->
-            </article>
-            <article class="item">
-                <p class="flavor">Peppermint Mocha</p><p class="price">3.75</p>
-                <!-- OG = Starbucks Peppermint Mocha - $5.75
-                    Peppermint Syrup 3-4tbs (~0.12 of the 1/2 cup syrup you made already)
-                    3tbs chocolate syrup [https://goodcheapeats.com/chocolate-syrup-recipe/ = 0.77 a batch]
-                    3/4 of your cup
-                    1/4 milk
-                    feeling frisky? add whipped cream to the top
+        <!-- <div class="menu">
+            <header>
+                <h1>CAFFINATED 'n' UNSTABLE</h1>
+                <p class="established">Est. 2023</p>
+            </header>
+            <hr>
+            <main>
+                <section>
+                <h2>Coffee</h2>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/> -->
+                <!-- Costs from: https://www.extension.iastate.edu/sioux/files/documents/Cost%20of%20Ingredients%202016.pdf -->
+                <!-- <article class="item">
+                    <p class="flavor">Brown Sugar Cinnamon Iced Coffee</p><p class="price">1.50</p> -->
+                    <!-- OG = Starbucks Iced Brown Sugar Oatmilk Shaken Espresso - $7.25, saving $5.75
+                        Brown Sugar (1tbs; $0.02)
+                        Cinnamon(sprikle; $0.02)
+                        Almond Milk(1/4 of your cup [1/4 gal = 3.75 so 1/4th cup =~$1.00])
+                        Coffee(3/4 of your cup; $0.20) 
+                        (two drops of Vanilla extract if youre feeling spicy; $0.10)
+                        as much ice as your heart desires: we recommend 4 cubes; free 
+                        ~ $1.34; Round up, $1.50
+                    -->
+                <!-- </article>
+                <article class="item">
+                    <p class="flavor">Peppermint Mocha</p><p class="price">3.75</p> -->
+                    <!-- OG = Starbucks Peppermint Mocha - $5.75
+                        Peppermint Syrup 3-4tbs (~0.12 of the 1/2 cup syrup you made already)
+                        3tbs chocolate syrup [https://goodcheapeats.com/chocolate-syrup-recipe/ = 0.77 a batch]
+                        3/4 of your cup
+                        1/4 milk
+                        feeling frisky? add whipped cream to the top
 
-                    Peppermint Syrup (0.23, roundup to 0.25):
-                        1/2 Cup of Granulated Sugar (0.15)
-                        1/2 Cup Water ... free?
-                        1/2 tsp peppermint extract (0.06-0.10, lets call it even and say 0.08)
-                -->
-            </article>
-            <article class="item">
-                <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
-            </article>
-            <article class="item">
-                <p class="flavor">Hazelnut</p><p class="price">4.00</p>
-            </article>
-            <article class="item">
-                <p class="flavor">Mocha</p><p class="price">4.50</p>
-            </article>
-            </section>
-            <section>
-            <h2>Desserts</h2>
-            <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
-            <article class="item">
-                <p class="dessert">Donut</p><p class="price">1.50</p>
-            </article>
-            <article class="item">
-                <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
-            </article>
-            <article class="item">
-                <p class="dessert">Cheesecake</p><p class="price">3.00</p>
-            </article>
-            <article class="item">
-                <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
-            </article>
-            </section>
-        </main>
-        <hr class="bottom-line">
-        <footer>
-            <p>
-            <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
-            </p>
-            <p class="address">123 Free Code Camp Drive</p>
-        </footer>
+                        Peppermint Syrup (0.23, roundup to 0.25):
+                            1/2 Cup of Granulated Sugar (0.15)
+                            1/2 Cup Water ... free?
+                            1/2 tsp peppermint extract (0.06-0.10, lets call it even and say 0.08)
+                    -->
+                <!-- </article>
+                <article class="item">
+                    <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Mocha</p><p class="price">4.50</p>
+                </article>
+                </section>
+                <section>
+                <h2>Desserts</h2>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+                <article class="item">
+                    <p class="dessert">Donut</p><p class="price">1.50</p>
+                </article>
+                <article class="item">
+                    <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+                </article>
+                <article class="item">
+                    <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+                </article>
+                <article class="item">
+                    <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+                </article>
+                </section>
+            </main>
+            <hr class="bottom-line">
+            <footer>
+                <p>
+                <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+                </p>
+                <p class="address">123 Free Code Camp Drive</p>
+            </footer> -->
         </div>
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const leftNavList = document.querySelector('.nav-list.left');
+        
+            menuToggle.addEventListener('click', function () {
+                leftNavList.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>

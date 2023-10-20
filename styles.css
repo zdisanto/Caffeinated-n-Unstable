@@ -1,62 +1,151 @@
 :root {
-        /*  Fonts */
-        --Oswald: 'Oswald', sans-serif;
-        /* 21px = Body; 16px = footer */
-        --CutiveMono: 'Cutive Mono', monospace;
-        /*  Colors */
-        /* --background-color: #f9f9f9;
-        --gray: #565656;
-        --font-color: #1a1a1a; */
-}
-/* == Nav Bar == */
-.nav {
-    font-family: var(--Oswald);
-    text-transform: uppercase;
-    display: flex;
-    justify-content: flex-end left;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* background: var(--main-red); */
-    /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4); */
-    /* z-index: 10; */
+    /* Fonts */
+    --Oswald: 'Oswald', sans-serif;
+    --CutiveMono: 'Cutive Mono', monospace;
+    /* Colors */
+    --background-color: #1a1a1a;
+    --gray: #565656;
+    --font-color: #f9f9f9;
 }
 
-.nav-list {
-    display: flex;
-    list-style-type: none;
-}
-
-@media (max-width: 28.75em) {
-    .nav {
-        justify-content: center;
-    }
-
-    .nav-list {
-        margin: 0 1rem;
-    }
-}
-
-.nav-list a {
-    display: block;
-    font-size: 16px;
-    padding: 1rem;
-    text-decoration: none;
-}
-
-.nav-list a:hover {
-    background: var(--main-blue);
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body {
+    background-color: var(--background-color);
+    /* Change later to a more coffee theme */
     /* background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); */
     font-family: var(--CutiveMono);
     padding: 20px;
 }
 
-h1 {
+@media (max-width: 1024px) {
+    body {
+        background-image: none;
+        background-color: var(--background-color);
+    }
+}
+
+/* == Nav Bar == */
+.nav {
     font-family: var(--Oswald);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    letter-spacing: .2rem;
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: center;
+    }
+    .nav-list {
+        margin: 2rem;
+    }
+}
+
+.nav-list > li > a {
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 10px;
+    margin-right: 10px;
+}
+
+.nav-list > li > a:hover {
+    color: var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+}
+
+/* == Menu Bar Toggle == */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-start;
+    position: absolute;
+    left: 10px;
+    text-align: left;
+    padding: 10px;
+    transition: transform 0.4s;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--font-color);
+    margin: 3px 0;
+    transition: transform 0.4s;
+}
+
+/* Make the Toggle Cool */
+.menu-toggle.active {
+    transform: rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(0deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+    transform: rotate(85deg);
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(0deg);
+}
+
+@media (max-width: 800px) {
+    .nav-list.left {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        background-color: var(--background-color);
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+    .nav-list.right {
+        margin: 2rem;
+    }
+
+    .nav-list.left.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin: 1.5rem 2rem;
+    }
+
+    .nav-list.left.active .bar {
+        /* background-color: var(--font-color); */
+        background-color: transparent;
+    }
+}
+
+/* == Body == */
+h1, h2 {
+    font-family: Impact, serif;
+}
+
+h1 {
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
@@ -77,17 +166,14 @@ h1, h2, p {
 .menu {
     width: 80%;
     background-color: burlywood;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 20px;
     max-width: 500px;
 }
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -25px;
+    margin: -25px auto 0;
 }
 
 hr {
@@ -100,14 +186,9 @@ hr {
     margin-top: 25px;
 }
 
-h1, h2 {
-    font-family: Impact, serif;
-}
-
 .item p {
     display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0;
     font-size: 18px;
 }
 
@@ -126,22 +207,11 @@ footer {
     font-size: 14px;
 }
 
-.address {
-    margin-bottom: 5px;
+.address, a, a:visited, a:hover, a:active {
+    color: var(--font-color);
+    text-decoration: none;
 }
 
-a {
-    color: black;
-}
-
-a:visited {
-    color: black;
-}
-
-a:hover {
-    color: brown;
-}
-
-a:active {
+a:hover, a:active {
     color: brown;
 }
