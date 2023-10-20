@@ -19,8 +19,12 @@ body {
     background-color: var(--background-color);
     /* Change later to a more coffee theme */
     /* background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); */
-    font-family: var(--CutiveMono);
+    font-family: var(--Oswald);
     padding: 20px;
+    color: var(--font-color);
+}
+p {
+    font-family: var(--CutiveMono);
 }
 
 @media (max-width: 1024px) {
@@ -135,23 +139,33 @@ body {
     }
 
     .nav-list.left.active .bar {
-        /* background-color: var(--font-color); */
         background-color: transparent;
     }
 }
 
 /* == Body == */
-h1, h2 {
-    font-family: Impact, serif;
-}
+h1, .statement {
+    position: fixed;
+    bottom: 0;
 
-h1 {
-    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 70px;
+    letter-spacing: .2rem;
     margin-top: 0;
     margin-bottom: 15px;
 }
+@media (max-width: 800px) {
+    h1, .statement {
+        position: fixed;
+        top: 100px;
+        text-align: center;
+        word-break: keep-all;
+    }
+}
 
-h2 {
+
+/* h2 {
     font-size: 30px;
 }
 
@@ -200,18 +214,14 @@ hr {
 .price {
     text-align: right;
     width: 25%;
-}
+} */
 
 /* FOOTER */
-footer {
+/* footer {
     font-size: 14px;
-}
+} */
 
 .address, a, a:visited, a:hover, a:active {
     color: var(--font-color);
     text-decoration: none;
-}
-
-a:hover, a:active {
-    color: brown;
 }
