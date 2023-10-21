@@ -76,9 +76,9 @@
             }
             /* FOOTER */
             footer {
+                font-family: var(--CutiveMono);
                 border-top: 1px solid var(--background-color);
                 font-size: 14px;
-                color: var(--background-color);
             }
             @media (max-width: 800px) {
                 footer {
@@ -115,7 +115,7 @@
         <br /><br /><br /><br /><br />
         <div class="menu">
             <main>
-                <section>
+                <section id="coffee">
                 <h2>Coffee &#9749;</h2>
                 <!-- Costs from: https://www.extension.iastate.edu/sioux/files/documents/Cost%20of%20Ingredients%202016.pdf -->
                 <article class="item">
@@ -155,7 +155,7 @@
                     <p class="flavor">Mocha</p><p class="price">4.50</p>
                 </article>
                 </section>
-                <section>
+                <section id="desserts">
                 <h2>Desserts &#129383;</h2>
                 <!-- <p class="emoji">&#129383;</p> -->
                 <article class="item">
@@ -174,7 +174,7 @@
             </main>
             <br />
         </div>
-        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br />
         <footer>
             <p>c. 2023 Caffinated 'n' Unstable ~ All Rights Reserved.&emsp;
                 <a class="silly">Privacy</a>&emsp;
@@ -185,6 +185,8 @@
             const menuToggle = document.querySelector('.menu-toggle');
             const leftNavList = document.querySelector('.nav-list.left');
             const body = document.querySelector('body');
+            const coffee = document.getElementById('coffee');
+            const desserts = document.getElementById('desserts');
         
             menuToggle.addEventListener('click', function () {
                 leftNavList.classList.toggle('active');
@@ -195,8 +197,12 @@
                     // GREEN: #7c988c or 
                     // PURPLE: #8b687f or BLUEGREEN: #28666e
                     body.style.backgroundColor = '#7c988c';
+                    coffee.style.color = 'transparent';
+                    desserts.style.color = 'transparent';
                 } else {
                     body.style.backgroundColor = '';
+                    coffee.style.display = '';
+                    desserts.style.display = '';
                 }
             });
         </script>

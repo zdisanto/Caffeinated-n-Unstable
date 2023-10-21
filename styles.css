@@ -122,3 +122,6 @@ html, body {
         background-color: transparent;
     }
 }
+footer {
+    color: var(--background-color);
+}

@@ -20,6 +20,7 @@
                 --font-color: #f9f9f9;
                 --dark-gray: #3c3c3d;
                 --CutiveMono: 'Cutive Mono', monospace;
+                --Oswald: 'Oswald', sans-serif;
             }
             body {
                 background-color: var(--font-color);
@@ -27,7 +28,7 @@
             .bar {
                 background-color: var(--background-color) !important;
             }
-            a, a:visited, a:hover, a:active {
+            p, h1, a, a:visited, a:hover, a:active {
                 color: var(--background-color) !important;
             }
             a:visited, a:hover, a:active {
@@ -36,49 +37,87 @@
             .silly {
                 cursor: pointer;
             }
-            h2 {
-                font-size: 30px;
+            p {
+                font-weight: 500;
             }
-            .established {
-                font-style: italic;
-            }
-            h1, h2, p {
-                text-align: center;
-            }
-            .menu {
-                width: 80%;
-                margin: 0 auto;
-                padding: 20px;
-                max-width: 500px;
-                color: var(--background-color);
+            .quote {
                 font-family: var(--CutiveMono);
+                position: fixed;
+                top: 100px;
+                right: 2rem;
+                letter-spacing: .1rem;
+                line-height: 1.5rem;
+                margin-top: 0;
+                margin-bottom: 15px;
             }
-            hr {
-                height: 2px;
-                background-color: var(--dark-gray);
-                border: none;
+            h1, .statement {
+                font-family: var(--Oswald);
+                position: fixed;
+                top: 100px;
+                left: 2rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 70px;
+                letter-spacing: .2rem;
+                margin-top: 0;
+                margin-bottom: 15px;
+                z-index: 1;
             }
-            .bottom-line {
-                margin-top: 25px;
+            @media (max-width: 1300px) {
+                .quote {
+                    position: fixed;
+                    top: 150px;
+                    left: 3rem;
+                    /* font-size: 16px; */
+                }
+                h1, .statement {
+                    font-size: 50px;
+                    position: fixed;
+                    top: 100px;
+                    left: 3rem;
+                    text-align: center;
+                    word-break: keep-all;
+                }
             }
-            .item p {
-                display: inline-block;
-                margin: 5px 0;
-                font-size: 18px;
+            @media (max-width: 800px) {
+                .quote {
+                    position: fixed;
+                    top: 150px;
+                    font-size: 14px;
+                }
+                h1, .statement {
+                    font-size: 40px;
+                    position: fixed;
+                    top: 100px;
+                    text-align: center;
+                    word-break: keep-all;
+                }
             }
-            .flavor, .dessert {
-                text-align: left;
-                width: 75%;
+            @media (max-width: 700px) {
+                .quote {
+                    position: fixed;
+                    top: 150px;
+                    font-size: 12px;
+                }
             }
-            .price {
-                text-align: right;
-                width: 25%;
+            @media (max-width: 620px) {
+                .quote {
+                    position: fixed;
+                    top: 150px;
+                    font-size: 10px;
+                }
             }
             /* FOOTER */
             footer {
+                font-family: var(--CutiveMono) !important;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                display: block;
+                margin: 0;
+                bottom: 0;
                 border-top: 1px solid var(--background-color);
                 font-size: 14px;
-                color: var(--background-color);
             }
             @media (max-width: 800px) {
                 footer {
@@ -112,11 +151,45 @@
                 </li>
             </ul>
         </nav>
-        </div>
+        <section class="statement left">
+            <h1 id="statement" style="max-width: 700px;">Make it yourself</h1>
+        </section>
+        <section class="quote right">
+            <p id="quote" style="max-width: 700px;">
+                The daily ritual. <span>Wake up</span>, get ready for the day ahead of you, 
+                grab a cup of coffee at your favorite coffee shop, then head 
+                to work or school. Repeat this. Every single day. For years. 
+                <span>How much money</span> do you think you are spending on that cup of coffee? 
+                <br /><br />
+                Taken from the most sold drinks at Starbucks, that could average to 
+                $4.60 a day. That's $23 a week-day. $93 a month. $1,104 a year. 
+                Stop the mindless routine and create a <span>new</span>, better, cheaper one. 
+                Take the $1,000+ you would spend on a cup of oversweetened coffee 
+                and buy a french press. You can buy them for anywhere between $10 
+                and $50 for a decent one. If you wanna go big, get a more expensive 
+                one. Or better yet, go buy a coffee machine. One with a single pot 
+                can cost you about $50. There are ones with timers, plug it in, 
+                before you go to bed get the coffee grounds and the pot set and 
+                put a timer on for when ever you need to get up in the morning. 
+                Coffee grounds can go from $10-$20 depending on where you get 
+                them from. Go wild. <span>Be free</span>. Drink your self made coffee.
+                <br /><br />
+                There you have it. That <span>beautiful coffee smell</span> in your house to 
+                wake you the fvck up in the morning. <span>Every morning</span>.
+            </p>
+        </section>
+        <footer>
+            <p>c. 2023 Caffinated 'n' Unstable ~ All Rights Reserved.&emsp;
+                <a class="silly">Privacy</a>&emsp;
+                <a class="silly">Terms of Service</a>&emsp;
+                <a class="silly">Careers</a>&emsp;~Hasta nunca &#128521;</p>
+        </footer>
         <script>
             const menuToggle = document.querySelector('.menu-toggle');
             const leftNavList = document.querySelector('.nav-list.left');
             const body = document.querySelector('body');
+            const statement = document.getElementById('statement');
+            const quote = document.getElementById('quote');
         
             menuToggle.addEventListener('click', function () {
                 leftNavList.classList.toggle('active');
@@ -127,8 +200,12 @@
                     // GREEN: #7c988c or 
                     // PURPLE: #8b687f or BLUEGREEN: #28666e
                     body.style.backgroundColor = '#d6a068';
+                    statement.style.display = 'none';
+                    quote.style.display = 'none';
                 } else {
                     body.style.backgroundColor = '';
+                    statement.style.display = '';
+                    quote.style.display = '';
                 }
             });
         </script>
