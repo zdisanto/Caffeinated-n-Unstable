@@ -22,7 +22,7 @@
                 --CutiveMono: 'Cutive Mono', monospace;
             }
             body {
-                background-color: var(--font-color) !important;
+                background-color: var(--font-color);
             }
             .bar {
                 background-color: var(--background-color) !important;
@@ -123,8 +123,10 @@
                 menuToggle.classList.toggle('active');
 
                 if (leftNavList.classList.contains('active')) {
-                    // BROWN: #502819 or YELLOW: #d6a068
-                    body.style.backgroundColor = '#502819';
+                    // BROWN: #502819 or YELLOW: #d6a068 or 
+                    // GREEN: #7c988c or 
+                    // PURPLE: #8b687f or BLUEGREEN: #28666e
+                    body.style.backgroundColor = '#d6a068';
                 } else {
                     body.style.backgroundColor = '';
                 }
