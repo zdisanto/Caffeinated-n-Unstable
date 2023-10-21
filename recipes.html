@@ -15,65 +15,70 @@
         <link href="styles.css" rel="stylesheet"/>
         <!-- My Internal Styling -->
         <style>
-            body {
-                /* SOURCE: https://unsplash.com/photos/black-ceramic-mug-on-brown-wooden-table-4FZr7coEb4E */
-                background-image: url(media/cafe.png);
-                font-family: var(--Oswald);
+            :root {
+                --background-color: #1a1a1a;
+                --font-color: #f9f9f9;
+                --dark-gray: #3c3c3d;
+                --CutiveMono: 'Cutive Mono', monospace;
+            }
+            .bar {
+                background-color: var(--background-color) !important;
+            }
+            a, a:visited, a:hover, a:active {
+                color: var(--background-color) !important;
+            }
+            a:visited, a:hover, a:active {
+                border-bottom: 1px solid var(--background-color) !important;
+            }
+            .silly {
+                cursor: pointer;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            .established {
+                font-style: italic;
+            }
+            h1, h2, p {
+                text-align: center;
+            }
+            .menu {
+                width: 80%;
+                margin: 0 auto;
                 padding: 20px;
-                color: var(--font-color);
-            }
-            @media (max-width: 800px) {
-                body {
-                    background-image: none;
-                    background-color: var(--background-color);
-                }
-            }
-            .content {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: calc(400vw);
-                height: 200px;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0) 100%);
-            }
-            q {
-                font-size: 24px;
-            }
-            p, q, blockquote {
+                max-width: 500px;
+                color: var(--background-color);
                 font-family: var(--CutiveMono);
-                font-weight: 500;
             }
-            .quote {
-                position: fixed;
-                bottom: 0;
-                right: 2rem;
-                letter-spacing: .2rem;
-                margin-top: 0;
-                margin-bottom: 15px;
+            hr {
+                height: 2px;
+                background-color: var(--dark-gray);
+                border: none;
             }
-            h1, .statement {
-                position: fixed;
-                bottom: 0;
-                left: 2rem;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 70px;
-                letter-spacing: .2rem;
-                margin-top: 0;
-                margin-bottom: 15px;
-                z-index: 1;
+            .bottom-line {
+                margin-top: 25px;
             }
-            @media (max-width: 1300px) {
-                .quote {
-                    display: none; 
-                }
+            .item p {
+                display: inline-block;
+                margin: 5px 0;
+                font-size: 18px;
+            }
+            .flavor, .dessert {
+                text-align: left;
+                width: 75%;
+            }
+            .price {
+                text-align: right;
+                width: 25%;
+            }
+            /* FOOTER */
+            footer {
+                border-top: 1px solid var(--background-color);
+                font-size: 14px;
+                color: var(--background-color);
             }
             @media (max-width: 800px) {
-                h1, .statement {
-                    position: fixed;
-                    top: 100px;
-                    left: 0;
-                    text-align: center;
+                footer {
                     word-break: keep-all;
                 }
             }
@@ -95,21 +100,15 @@
                     <a href="menu.html">Menu</a>
                 </li>
                 <li>
-                    <a href="recipes.html">Recipes</a>
+                    <a href="#">Recipes</a>
                 </li>
             </ul>
             <ul class="nav-list right">
                 <li>
-                    <a href="#">CAFFINATED 'n' UNSTABLE</a>
+                    <a href="index.html">CAFFINATED 'n' UNSTABLE</a>
                 </li>
             </ul>
         </nav>
-        <section class="statement">
-            <h1>Your not-so-local <br />internet coffee shop</h1>
-        </section>
-        <section class="quote">
-            <p><q>Never underestimate the power <br />of a good cup of coffee.</q><br /><blockquote>- Ursula Vernon</blockquote></p>
-        </section>
         </div>
         <script>
             const menuToggle = document.querySelector('.menu-toggle');

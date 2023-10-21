@@ -13,29 +13,6 @@ html, body {
     height: 100vh;
     overflow: hidden;
 }
-
-body {
-    /* SOURCE: https://unsplash.com/photos/black-ceramic-mug-on-brown-wooden-table-4FZr7coEb4E */
-    background-image: url(media/cafe.png);
-    font-family: var(--Oswald);
-    padding: 20px;
-    color: var(--font-color);
-}
-.content {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: calc(400vw);
-    height: 200px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0) 100%);
-}
-@media (max-width: 800px) {
-    body {
-        background-image: none;
-        background-color: var(--background-color);
-    }
-}
-
 /* == Nav Bar == */
 .nav {
     font-family: var(--Oswald);
@@ -49,7 +26,6 @@ body {
     width: 100%;
     z-index: 100;
 }
-
 .nav-list {
     list-style-type: none;
     display: flex;
@@ -58,7 +34,6 @@ body {
     column-gap: 20px;
     letter-spacing: .2rem;
 }
-
 @media (max-width: 1024px) {
     .nav {
         justify-content: center;
@@ -67,19 +42,20 @@ body {
         margin: 2rem;
     }
 }
-
 .nav-list > li > a {
     font-size: 16px;
     text-decoration: none;
     line-height: 10px;
     margin-right: 10px;
 }
-
 .nav-list > li > a:hover {
     color: var(--font-color);
     border-bottom: 1px solid var(--font-color);
 }
-
+.address, a, a:visited, a:active {
+    color: var(--font-color);
+    text-decoration: none;
+}
 /* == Menu Bar Toggle == */
 .menu-toggle {
     display: none;
@@ -92,7 +68,6 @@ body {
     padding: 10px;
     transition: transform 0.4s;
 }
-
 .bar {
     width: 25px;
     height: 3px;
@@ -100,7 +75,6 @@ body {
     margin: 3px 0;
     transition: transform 0.4s;
 }
-
 /* Make the Toggle Cool */
 .menu-toggle.active {
     transform: rotate(45deg);
@@ -114,7 +88,9 @@ body {
 .menu-toggle.active .bar:nth-child(3) {
     transform: translateY(-6px) rotate(0deg);
 }
-
+.nav-list.right {
+    text-transform: none;
+}
 @media (max-width: 800px) {
     .nav-list.left {
         display: none;
@@ -145,108 +121,4 @@ body {
     .nav-list.left.active .bar {
         background-color: transparent;
     }
-}
-
-/* == Body == */
-q {
-    font-size: 24px;
-}
-p, q, blockquote {
-    font-family: var(--CutiveMono);
-    font-weight: 500;
-}
-.quote {
-    position: fixed;
-    bottom: 0;
-    right: 2rem;
-    letter-spacing: .2rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-h1, .statement {
-    position: fixed;
-    bottom: 0;
-    left: 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 70px;
-    letter-spacing: .2rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-@media (max-width: 1300px) {
-    .quote {
-        display: none; 
-    }
-}
-@media (max-width: 800px) {
-    h1, .statement {
-        position: fixed;
-        top: 100px;
-        left: 0;
-        text-align: center;
-        word-break: keep-all;
-    }
-}
-
-/* h2 {
-    font-size: 30px;
-}
-
-.established {
-    font-style: italic;
-}
-
-h1, h2, p {
-    text-align: center;
-}
-
-.menu {
-    width: 80%;
-    background-color: burlywood;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 500px;
-}
-
-img {
-    display: block;
-    margin: -25px auto 0;
-}
-
-hr {
-    height: 2px;
-    background-color: brown;
-    border-color: brown;
-}
-
-.bottom-line {
-    margin-top: 25px;
-}
-
-.item p {
-    display: inline-block;
-    margin: 5px 0;
-    font-size: 18px;
-}
-
-.flavor, .dessert {
-    text-align: left;
-    width: 75%;
-}
-
-.price {
-    text-align: right;
-    width: 25%;
-} */
-
-/* FOOTER */
-/* footer {
-    font-size: 14px;
-} */
-
-.address, a, a:visited, a:hover, a:active {
-    color: var(--font-color);
-    text-decoration: none;
 }
