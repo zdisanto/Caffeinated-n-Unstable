@@ -7,7 +7,6 @@
     --gray: #565656;
     --font-color: #f9f9f9;
 }
-
 html, body {
     margin: 0;
     padding: 0;
@@ -16,18 +15,21 @@ html, body {
 }
 
 body {
-    background-color: var(--background-color);
-    /* Change later to a more coffee theme */
-    /* background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); */
+    /* SOURCE: https://unsplash.com/photos/black-ceramic-mug-on-brown-wooden-table-4FZr7coEb4E */
+    background-image: url(media/cafe.png);
     font-family: var(--Oswald);
     padding: 20px;
     color: var(--font-color);
 }
-p {
-    font-family: var(--CutiveMono);
+.content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: calc(400vw);
+    height: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0) 100%);
 }
-
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
     body {
         background-image: none;
         background-color: var(--background-color);
@@ -45,6 +47,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
 }
 
 .nav-list {
@@ -120,10 +123,11 @@ p {
         position: absolute;
         top: 60px;
         left: 10px;
-        background-color: var(--background-color);
+        background-color: transparent;
         width: 100%;
         text-align: left;
         padding: 10px;
+        z-index: 0;
     }
     .nav-list.right {
         margin: 2rem;
@@ -144,26 +148,47 @@ p {
 }
 
 /* == Body == */
+q {
+    font-size: 24px;
+}
+p, q, blockquote {
+    font-family: var(--CutiveMono);
+    font-weight: 500;
+}
+.quote {
+    position: fixed;
+    bottom: 0;
+    right: 2rem;
+    letter-spacing: .2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
 h1, .statement {
     position: fixed;
     bottom: 0;
-
+    left: 2rem;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 70px;
     letter-spacing: .2rem;
     margin-top: 0;
     margin-bottom: 15px;
+    z-index: 1;
+}
+@media (max-width: 1300px) {
+    .quote {
+        display: none; 
+    }
 }
 @media (max-width: 800px) {
     h1, .statement {
         position: fixed;
         top: 100px;
+        left: 0;
         text-align: center;
         word-break: keep-all;
     }
 }
-
 
 /* h2 {
     font-size: 30px;
