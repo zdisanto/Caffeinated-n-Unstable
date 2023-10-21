@@ -49,6 +49,7 @@
                 line-height: 1.5rem;
                 margin-top: 0;
                 margin-bottom: 15px;
+                z-index: 11;
             }
             h1, .statement {
                 font-family: var(--Oswald);
@@ -61,12 +62,12 @@
                 letter-spacing: .2rem;
                 margin-top: 0;
                 margin-bottom: 15px;
-                z-index: 1;
+                z-index: 10;
             }
             @media (max-width: 1300px) {
                 .quote {
                     position: fixed;
-                    top: 150px;
+                    top: 170px;
                     left: 3rem;
                     /* font-size: 16px; */
                 }
@@ -124,6 +125,11 @@
                     word-break: keep-all;
                 }
             }
+            /* :Hover Images */
+            /* #wakeUp:hover {
+                background-image: url(media/wakeUp.png);
+                position: relative;
+            } */
         </style>
     </head>
     <body>
@@ -153,29 +159,37 @@
         </nav>
         <section class="statement left">
             <h1 id="statement" style="max-width: 700px;">Make it yourself</h1>
+            <div id="imageContainer" style="z-index: -1 !important;"></div>
         </section>
         <section class="quote right">
-            <p id="quote" style="max-width: 700px;">
-                The daily ritual. <span>Wake up</span>, get ready for the day ahead of you, 
+            <!-- wakeUp.png SOURCE: https://unsplash.com/photos/green-ceramic-mug-on-wooden-desk-m0l5J8Lqnzo -->
+            <!-- money.png SOURCE: https://unsplash.com/photos/1-us-dollar-banknote-E9NE0qcq74k -->
+            <!-- new.png SOURCE: https://unsplash.com/photos/white-mug-beside-white-paper-C8C020JnsjM -->
+            <!-- frenchPress.png SOURCE: https://unsplash.com/photos/french-press-on-coil-stove-68F3ayAGCfw -->
+            <!-- free.png SOURCE: https://unsplash.com/photos/gray-stainless-steel-mokapot-on-burner-between-two-white-mugs-on-green-grass-39KMFsgTLz0 -->
+            <!-- beautiful.png SOURCE: https://unsplash.com/photos/black-ceramic-teacup-on-table-_S6eV1Uz5A8 -->
+            <!-- morning.png SOURCE: https://unsplash.com/photos/person-pouring-coffee-on-glass-cup-SMPe5xfbPT0 -->
+            <p id="quote" style="max-width: 700px; text-align: justify;">
+                <span id="wakeUp">The daily ritual. Wake up, get ready for the day ahead of you, 
                 grab a cup of coffee at your favorite coffee shop, then head 
-                to work or school. Repeat this. Every single day. For years. 
-                <span>How much money</span> do you think you are spending on that cup of coffee? 
+                to work or school.</span> Repeat this. Every single day. For years. 
+                <span id="money">How much money do you think you are spending on that cup of coffee?</span>
                 <br /><br />
                 Taken from the most sold drinks at Starbucks, that could average to 
                 $4.60 a day. That's $23 a week-day. $93 a month. $1,104 a year. 
-                Stop the mindless routine and create a <span>new</span>, better, cheaper one. 
+                <span id="new">Stop the mindless routine and create a new, better, cheaper one.</span>
                 Take the $1,000+ you would spend on a cup of oversweetened coffee 
-                and buy a french press. You can buy them for anywhere between $10 
-                and $50 for a decent one. If you wanna go big, get a more expensive 
+                and <span id="frechPress">buy a french press. You can buy them for anywhere between $10 
+                and $50 for a decent one.</span> If you wanna go big, get a more expensive 
                 one. Or better yet, go buy a coffee machine. One with a single pot 
                 can cost you about $50. There are ones with timers, plug it in, 
                 before you go to bed get the coffee grounds and the pot set and 
                 put a timer on for when ever you need to get up in the morning. 
                 Coffee grounds can go from $10-$20 depending on where you get 
-                them from. Go wild. <span>Be free</span>. Drink your self made coffee.
+                them from. <span id="free">Go wild. Be free. Drink your self made coffee.</span>
                 <br /><br />
-                There you have it. That <span>beautiful coffee smell</span> in your house to 
-                wake you the fvck up in the morning. <span>Every morning</span>.
+                There you have it. <span  id="beautiful">That beautiful coffee smell in your house to 
+                wake you the fvck up in the morning.</span> <span  id="morning">Every morning</span>.
             </p>
         </section>
         <footer>
@@ -207,6 +221,32 @@
                     statement.style.display = '';
                     quote.style.display = '';
                 }
+            });
+            // =============
+            const wordToImageMap = {
+                wakeUp: 'wakeUp.png',
+                money: 'money.png',
+                new: 'new.png',
+                frechPress: 'frenchPress.png',
+                free: 'free.png',
+                beautiful: 'beautiful.png',
+                morning: 'morning.png'
+            };
+            const imageContainer = document.getElementById('imageContainer');
+            quote.addEventListener('mouseover', function (e) {
+                if (e.target.id in wordToImageMap) {
+                    const imageName = wordToImageMap[e.target.id];
+                    const image = document.createElement('img');
+                    image.style.marginTop = '4rem';
+                    image.style.maxWidth = '600px';
+                    image.src = `media/${imageName}`;
+                    imageContainer.innerHTML = ''; 
+                    imageContainer.appendChild(image);
+                }
+
+            });
+            quote.addEventListener('mouseout', function () {
+                imageContainer.innerHTML = ''; 
             });
         </script>
     </body>
