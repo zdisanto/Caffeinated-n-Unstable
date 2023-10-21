@@ -121,10 +121,18 @@
         <script>
             const menuToggle = document.querySelector('.menu-toggle');
             const leftNavList = document.querySelector('.nav-list.left');
+            const body = document.querySelector('body');
         
             menuToggle.addEventListener('click', function () {
                 leftNavList.classList.toggle('active');
                 menuToggle.classList.toggle('active');
+
+                if (leftNavList.classList.contains('active')) {
+                    // BROWN: #502819 or YELLOW: #d6a068
+                    body.style.backgroundColor = '#502819';
+                } else {
+                    body.style.backgroundColor = '';
+                }
             });
         </script>
     </body>
