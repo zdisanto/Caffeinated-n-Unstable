@@ -116,7 +116,7 @@
         <div class="menu">
             <main>
                 <section id="coffee">
-                <h2>Coffee &#9749;</h2>
+                <h2 class="emoji">Coffee &#9749;</h2>
                 <!-- Costs from: https://www.extension.iastate.edu/sioux/files/documents/Cost%20of%20Ingredients%202016.pdf -->
                 <article class="item">
                     <p class="flavor">Brown Sugar Cinnamon Iced Coffee</p><p class="price">1.50</p>
@@ -156,7 +156,7 @@
                 </article>
                 </section>
                 <section id="desserts">
-                <h2>Desserts &#129383;</h2>
+                <h2 class="emoji">Desserts &#129383;</h2>
                 <!-- <p class="emoji">&#129383;</p> -->
                 <article class="item">
                     <p class="dessert">Donut</p><p class="price">1.50</p>
@@ -187,6 +187,7 @@
             const body = document.querySelector('body');
             const coffee = document.getElementById('coffee');
             const desserts = document.getElementById('desserts');
+            const emoji = document.querySelector('emohi');
         
             menuToggle.addEventListener('click', function () {
                 leftNavList.classList.toggle('active');
@@ -199,10 +200,12 @@
                     body.style.backgroundColor = '#7c988c';
                     coffee.style.color = 'transparent';
                     desserts.style.color = 'transparent';
+                    emoji.style.display = 'none';
                 } else {
-                    body.style.backgroundColor = '';
-                    coffee.style.display = '';
-                    desserts.style.display = '';
+                    body.style.backgroundColor = 'initial';
+                    coffee.style.color = 'initial';
+                    desserts.style.color = 'initial';
+                    emoji.style.display = 'initial';
                 }
             });
         </script>
