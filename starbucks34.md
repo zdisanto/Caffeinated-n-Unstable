@@ -42,7 +42,7 @@
 ----
 ### Price Breakdown:
 <!-- Looks weird, bear with me... -->
-| Average Total: | Average Cup Cost: | Round Up Avg. Cup Cost: | Avg. Weekday Total |  Avg. Month Total  | Avg. Year Total |
+| Average Total  | Average Cup Cost  | Round Up Avg. Cup Cost  | Avg. Weekday Total |  Avg. Month Total  | Avg. Year Total |
 | :------------: |   :------------:  |      :------------:     |   :------------:   |   :------------:   |  :------------: |
 |    ~$194.22    |     ~$4.90/cup    |        ~$5.00/cup       |       $25.00       |       $100.00      |    $1,200.00    |
 <!-- The end of the weird looking table -->
