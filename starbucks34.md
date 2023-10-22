@@ -1,6 +1,6 @@
 ## [The 34 Most Popular Starbucks Drinks](https://www.tastingtable.com/721208/the-most-popular-starbucks-drinks-ranked-worst-to-best/)
 
-| #   | Name                                          | Tall Price*| Avg |
+| #   | Name                                          | Tall Price*| Avg.|
 | --- | --------------------------------------------- | ---------- | --- |
 | 1.  | Iced Brown Sugar Oat Milk Shaken Espresso     | $5.81      | --- |
 | 2.  | Pumpkin Cream Cold Brew                       | $4.45      | --- |
