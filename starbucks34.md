@@ -39,23 +39,16 @@
 
 ###### *Tall = Small
 ----
-<!-- 
-    Average Total: $194.22 
-    Average Cup Cost: $4.90 
-    Round Up Ang. Cost: $5.00 
-    Cost for Week-days: $25.00
-    Cost a Month: $100.00
-    Cost a Year: $1,200.00
--->
 ----
+### Price Breakdown:
 <!-- Looks weird, bear with me... -->
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | Average Price: |
-|:------------:| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | 
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ~$4.90/cup   |
+| Average Total: | Average Cup Cost: | Round Up Avg. Cup Cost: | Avg. Weekday Total |  Avg. Month Total  | Avg. Year Total |
+| :------------: |   :------------:  |      :------------:     |   :------------:   |   :------------:   |  :------------: |
+|    ~$194.22    |     ~$4.90/cup    |        ~$5.00/cup       |       $25.00       |       $100.00      |    $1,200.00    |
 <!-- The end of the weird looking table -->
 
 #### Prices found via Google, [Mobile Cuisine](https://mobile-cuisine.com/menu/starbucks-prices/), [The Food XP](https://thefoodxp.com/starbucks-holiday-menu-prices/), and the [Starbucks App*](https://www.starbucks.com/rewards/mobile-apps/). 
-###### *All from Starbucks app is +tax.
+###### *All prices from the Starbucks app includes tax.
 
 <!-- 
     :-- means the column is left aligned.
