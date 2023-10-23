@@ -1,6 +1,6 @@
 ## [The 34 Most Popular Starbucks Drinks](https://www.tastingtable.com/721208/the-most-popular-starbucks-drinks-ranked-worst-to-best/)
 
-| #   | Name                                          | Tall Price*| Avg |
+| #   | Name                                          | Tall Price*| Avg.|
 | --- | --------------------------------------------- | ---------- | --- |
 | 1.  | Iced Brown Sugar Oat Milk Shaken Espresso     | $5.81      | --- |
 | 2.  | Pumpkin Cream Cold Brew                       | $4.45      | --- |
@@ -42,7 +42,7 @@
 ----
 ### Price Breakdown:
 <!-- Looks weird, bear with me... -->
-| Average Total: | Average Cup Cost: | Round Up Avg. Cup Cost: | Avg. Weekday Total |  Avg. Month Total  | Avg. Year Total |
+| Average Total  | Average Cup Cost  | Round Up Avg. Cup Cost  | Avg. Weekday Total |  Avg. Month Total  | Avg. Year Total |
 | :------------: |   :------------:  |      :------------:     |   :------------:   |   :------------:   |  :------------: |
 |    ~$194.22    |     ~$4.90/cup    |        ~$5.00/cup       |       $25.00       |       $100.00      |    $1,200.00    |
 <!-- The end of the weird looking table -->
