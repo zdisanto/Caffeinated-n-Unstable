@@ -92,6 +92,9 @@ html, body {
     text-transform: none;
 }
 @media (max-width: 800px) {
+    .nav {
+        display: inline-block;
+    }
     .nav-list.left {
         display: none;
         flex-direction: column;
@@ -106,7 +109,10 @@ html, body {
         z-index: 0;
     }
     .nav-list.right {
+        text-align: center;
         margin: 2rem;
+        padding-left: 80px;
+        padding-top: 2px;
     }
 
     .nav-list.left.active {
