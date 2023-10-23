@@ -111,8 +111,8 @@ html, body {
     .nav-list.right {
         text-align: center;
         margin: 2rem;
-        padding-left: 80px;
-        padding-top: 2px;
+        text-align: center;
+        padding: 2px 60px;
     }
 
     .nav-list.left.active {
